@@ -1,0 +1,39 @@
+{
+  "name": "social-media-dashbaord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
+    "lite": "lite-server",
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "watch:all": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexiscodes21/social-media-dashboard.git"
+  },
+  "author": "Alexi sWinters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexiscodes21/social-media-dashboard/issues"
+  },
+  "homepage": "https://github.com/alexiscodes21/social-media-dashboard#readme",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "imagemin-cli": "^7.0.0",
+    "lite-server": "^2.6.1",
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.2",
+    "rimraf": "^5.0.1",
+    "usemin-cli": "^0.6.0"
+  },
+  "dependencies": {
+    "uglify-js": "^3.17.4"
+  }
+}
