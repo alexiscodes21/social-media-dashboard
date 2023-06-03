@@ -1,0 +1,70 @@
+:root {
+  /* stats change count colors */
+  --lime-green-color: #1db489;
+  --bright-red-color: #dc414c;
+  /* social media colors */
+  --facebook-color: #198ff5;
+  --twitter-color: #1ca0f2;
+  --instagram-color: linear-gradient(to right, #fdc468, #df4996);
+  --youtube-color: #c4032a;
+  /* dark and light mode toggle button colors */
+  --toggle-gradient-color: linear-gradient(to right, #378fe6, #3eda82);
+  --toggle-color: #aeb3cb;
+  /* dark mode colors */
+  --dark-blue-bg-color: #1e202a;
+  --dark-blue-top-bg-pattern-color: #1f212e;
+  --dark-blue-desaturated-card-bg-color: #252a41;
+  --blue-desaturated-text-color: #8b97c6;
+  --white-text-color: #ffffff;
+  /* light mode colors */
+  --white-bg-color: #ffffff;
+  --pale-blue-top-bg-pattern-color: #f5f7ff;
+  --light-gray-blue-card-bg-color: #f0f2fa;
+  --dark-gray-blue-text-color: #63687e;
+  --dark-blue-text-color: #1e202a;
+  /* fonts */
+  --font-size: 0.8rem;
+  --font-family: "Inter", sans-serif;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 1;
+  font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.card {
+  padding: 1.25rem;
+}
+
+.toggle .btn {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--toggle-color);
+  }
