@@ -1,7 +1,7 @@
 {
   "name": "social-media-dashbaord",
   "version": "1.0.0",
-  "description": "",
+  "description": "This was a challenge that I completed on Front-End Mentor",
   "main": "index.html",
   "scripts": {
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
@@ -9,9 +9,11 @@
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "imagemin": "imagemin img/* -o dist/img",
     "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
     "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
     "watch:all": "lite-server"
   },
   "repository": {
@@ -28,6 +30,7 @@
     "copyfiles": "^2.4.1",
     "imagemin-cli": "^7.0.0",
     "lite-server": "^2.6.1",
+    "node-sass": "^9.0.0",
     "onchange": "^7.1.0",
     "parallelshell": "^3.0.2",
     "rimraf": "^5.0.1",
