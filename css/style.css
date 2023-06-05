@@ -9,7 +9,7 @@
   --youtube-color: #c4032a;
   /* dark and light mode toggle button colors */
   --toggle-gradient-color: linear-gradient(to right, #378fe6, #3eda82);
-  --toggle-color: #aeb3cb;
+  --toggle-color-light: #aeb3cb;
   /* dark mode colors */
   --dark-blue-bg-color: #1e202a;
   --dark-blue-top-bg-pattern-color: #1f212e;
@@ -56,7 +56,7 @@ h3 {
 
 h1 {
   font-size: 1.5rem;
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -71,15 +71,77 @@ a:active {
   text-decoration: none;
 }
 
-.card {
-  padding: 1.25rem;
+label[for="dark"] {
+  grid-column: 1 / 2;
+  justify-self: end;
 }
 
-.toggle .btn {
-  width: 1rem;
-  height: 1rem;
+
+label[for="light"] {
+  grid-column: 3 / 4;
+}
+
+.toggle {
+  display: grid;
+  grid-template-columns: 1fr 3.75rem 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  border: none;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.toggle-wrapper {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  height: 1.5rem;
+}
+
+.toggle input[type="radio"] {
+  margin: 0 -2px 0 -2px;
+  opacity: 0;
+  width: 1.25rem;
+  height: 1.5rem;
+}
+
+
+.toggle-background {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--toggle-gradient-color);
+  pointer-events: none;
+}
+
+.toggle-button {
+  position: absolute;
+  left: .2rem;
+  top: .2rem;
+  right: 100%;
+  width: 1.125rem;
+  height: 1.125rem;
   border-radius: 50%;
-  background-color: var(--toggle-color);
+  background-color: var(--dark-blue-bg-color);
+  transition: all 200ms ease-in-out;
+}
+
+.toggle #light:checked ~ .toggle-button {
+  left: calc(100% - 1.3rem);
+  right: .2rem;
+}
+
+.toggle #system:checked ~ .toggle-button {
+  left: 50%;
+  right: auto;
+  transform: translate(-50%);
+}
+
+label {
+  font-size: .9rem;
 }
 
 .container {
@@ -95,13 +157,15 @@ a:active {
 }
 
 .header {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 2.25rem;
 }
 
 @media screen and (min-width: 724px) {
   .header {
     display: flex;
-    justify-content: between;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -114,13 +178,68 @@ a:active {
 }
 
 .header-title {
+  width: 100%;
+}
+
+@media screen and (min-width: 624px) {
+  .header-title {
+    width: auto;
+  }
 }
 
 .header-subtitle {
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: var(--font-weight-700);
   color: var(--dark-blue-desaturated-text-color);
 }
 
 .header-toggle {
+}
+
+.card {
+  background: var(--dark-blue-desaturated-card-bg-color);
+  color: var(--dark-blue-desaturated-text-color);
+  padding: 1.25rem;
+}
+
+.card-platform {
+}
+
+.card-icon .facebook {
+}
+
+.card-icon .twitter {
+}
+
+.card-icon .instagram {
+}
+
+.card-icon .youtube {
+}
+
+.card-username {
+}
+
+.card-count {
+}
+
+.card-count .count-big {
+}
+
+.card-count .count-small {
+}
+
+.card-count .count-up {
+}
+
+.card-label {
+}
+
+.card-change {
+}
+
+.card-change .change-up {
+}
+
+.card-change .change-down {
 }
