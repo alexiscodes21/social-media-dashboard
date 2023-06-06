@@ -20,6 +20,7 @@
   /* light mode colors */
   --light-white-bg-color: #ffffff;
   --light-pale-blue-top-bg-pattern-color: #f5f7ff;
+  --light-white-card-hover: #e1e3f0;
   --light-gray-blue-card-bg-color: #f0f2fa;
   --light-dark-gray-blue-text-color: #63687e;
   --light-dark-blue-text-color: #1e202a;
@@ -27,6 +28,32 @@
   --font-family: "Inter", sans-serif;
   --font-weight-400: 400;
   --font-weight-700: 700;
+  /* dark-light theme */
+  --background: var(--light-white-bg-color);
+  --text-color: var(--light-dark-blue-text-color);
+  --header-subtitle: var(--light-dark-gray-blue-text-color);
+  --card-color: var(--light-gray-blue-card-bg-color);
+  --card-text: var(--light-dark-blue-text-color);
+  --card-followers-text: var(--light-dark-gray-blue-text-color);
+  --card-hover: var(--light-white-card-hover);
+  --toggle-bg: var(--toggle-color-light);
+  --toggle-button: var(--light-white-bg-color);
+  --dark-mode-text-color: var(--light-dark-gray-blue-text-color)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-blue-bg-color);
+    --text-color: var(--dark-white-text-color);
+    --header-subtitle: var(--dark-blue-desaturated-text-color);
+    --card-color: var(--dark-blue-desaturated-card-bg-color);
+    --card-text: var(--light-dark-blue-text-color);
+    --card-followers-text: var(--dark-blue-desaturated-text-color);
+    --card-hover: var(--dark-blue-card-hover);
+    --toggle-bg: var(--toggle-gradient-color);
+    --toggle-button: var(--dark-blue-bg-color);
+    --dark-mode-text-color: var(--dark-blue-desaturated-text-color);
+  }
 }
 
 html {
@@ -44,8 +71,8 @@ body {
   margin: 0;
   padding: 1;
   font-family: var(--font-family);
-  background-color: var(--dark-blue-bg-color);
-  color: var(--dark-white-text-color);
+  background-color: var(--light-white-bg-color);
+  color: var(--light-dark-blue-text-color);
 }
 
 @media screen and (max-width: 624px) {
@@ -76,8 +103,10 @@ a:visited,
 a:active {
   text-decoration: none;
 }
+
 label {
   font-size: 0.8rem;
+  color: var(--light-dark-gray-blue-text-color);
 }
 
 .visually-hidden {
@@ -121,7 +150,7 @@ label[for="dark"] {
   top: 0;
   border-radius: 0.75rem;
   overflow: hidden;
-  background: var(--toggle-gradient-color);
+  background: var(--toggle-color-light);
   pointer-events: none;
 }
 
@@ -133,7 +162,7 @@ label[for="dark"] {
   width: 1.125rem;
   height: 1.125rem;
   border-radius: 50%;
-  background-color: var(--dark-blue-bg-color);
+  background-color: var(--light-white-bg-color);
   transition: all 200ms ease-in-out;
 }
 
@@ -198,7 +227,7 @@ label {
 .header-subtitle {
   font-size: 0.8rem;
   font-weight: var(--font-weight-700);
-  color: var(--dark-blue-desaturated-text-color);
+  color: var(--light-dark-gray-blue-text-color);
 }
 
 .grid {
@@ -218,8 +247,8 @@ label {
 }
 
 .card {
-  background: var(--dark-blue-desaturated-card-bg-color);
-  color: var(--dark-blue-desaturated-text-color);
+  background: var(--light-gray-blue-card-bg-color);
+  color: var(--light-dark-gray-blue-text-color);
   padding: 1.5rem;
   width: 16rem;
   text-align: center;
@@ -229,7 +258,7 @@ label {
 }
 
 .card:hover {
-  background: var(--dark-blue-card-hover);
+  background: var(--light-white-card-hover);
   cursor: pointer;
 }
 
@@ -267,7 +296,7 @@ label {
 }
 
 .card-followers {
-  color: var(--dark-white-text-color);
+  color: var(--light-dark-blue-text-color);
   font-size: 3.5rem;
 }
 
@@ -309,7 +338,7 @@ label {
 }
 
 .social-stat-counts {
-  color: var(--dark-white-text-color);
+  color: var(--light-dark-blue-text-color);
   font-size: 1.5rem;
   margin-top: 1rem;
 }
