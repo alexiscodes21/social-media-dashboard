@@ -23,7 +23,6 @@
   --light-dark-gray-blue-text-color: #63687e;
   --light-dark-blue-text-color: #1e202a;
   /* fonts */
-  --font-size: 0.8rem;
   --font-family: "Inter", sans-serif;
   --font-weight-400: 400;
   --font-weight-700: 700;
@@ -191,13 +190,30 @@ label {
   color: var(--dark-blue-desaturated-text-color);
 }
 
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 748px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .card {
   background: var(--dark-blue-desaturated-card-bg-color);
   color: var(--dark-blue-desaturated-text-color);
   padding: 1.5rem;
   width: 16rem;
   text-align: center;
-  border-radius: .3rem;
+  /* border-radius: 0.3rem; */
+  margin: 0 auto 2rem auto;
 }
 
 .card-platform {
@@ -220,7 +236,9 @@ label {
 }
 
 .instagram {
-  border-top: 0.3rem solid var(--instagram-color);
+  border-top: 0.3rem solid;
+  border-image: var(--instagram-color);
+  border-image-slice: 1;
 }
 
 .youtube {
@@ -259,13 +277,39 @@ label {
   margin-right: 0.5rem;
 }
 
-.card-change {
+.card-change-up {
   color: var(--lime-green-color);
   font-size: 0.75rem;
 }
 
-.card-change .change-up {
+.card-change-down {
+  color: var(--bright-red-color);
+  font-size: 0.75rem;
 }
 
-.card-change .change-down {
+.views-likes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-stat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-stat-counts {
+  color: var(--dark-white-text-color);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.percentage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.percentage .card-change-down {
+  margin-right: .5rem;
 }
