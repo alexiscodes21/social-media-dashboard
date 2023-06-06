@@ -8,21 +8,15 @@ function toggleMode() {
   var dark_textColor = "#ffffff";
   var dark_headerSubtitle = "#8b97c6";
   var dark_cardColor = "#252a41";
-  //   var dark_cardText =
-  //   var dark_cardFollowersText =
   var dark_cardHover = "#333a55";
   var dark_toggleBG = "linear-gradient(to right, #378fe6, #3eda82)";
-  //   var dark_toggleButton =
 
   var light_backgroundColor = "#ffffff";
   var light_textColor = "#1e202a";
   var light_headerSubtitle = "#63687e";
   var light_cardColor = "#f0f2fa";
-  //   var light_cardText = "#1e202a";
-  //   var light_cardFollowersText = "#63687e";
   var light_cardHover = "#e1e3f0";
   var light_toggleBG = "#aeb3cb";
-  //   var light_toggleButton =
 
   if (isDarkMode) {
     document.documentElement.style.setProperty("--background-color", dark_backgroundColor);
