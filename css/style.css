@@ -12,14 +12,12 @@
   --toggle-color-light: #aeb3cb;
   /* dark mode colors */
   --dark-blue-bg-color: #1e202a;
-  --dark-blue-top-bg-pattern-color: #1f212e;
   --dark-blue-desaturated-card-bg-color: #252a41;
   --dark-blue-card-hover: #333a55;
   --dark-blue-desaturated-text-color: #8b97c6;
   --dark-white-text-color: #ffffff;
   /* light mode colors */
   --light-white-bg-color: #ffffff;
-  --light-pale-blue-top-bg-pattern-color: #f5f7ff;
   --light-white-card-hover: #e1e3f0;
   --light-gray-blue-card-bg-color: #f0f2fa;
   --light-dark-gray-blue-text-color: #63687e;
@@ -29,31 +27,12 @@
   --font-weight-400: 400;
   --font-weight-700: 700;
   /* dark-light theme */
-  --background: var(--light-white-bg-color);
+  --background-color: var(--light-white-bg-color);
   --text-color: var(--light-dark-blue-text-color);
   --header-subtitle: var(--light-dark-gray-blue-text-color);
   --card-color: var(--light-gray-blue-card-bg-color);
-  --card-text: var(--light-dark-blue-text-color);
-  --card-followers-text: var(--light-dark-gray-blue-text-color);
   --card-hover: var(--light-white-card-hover);
   --toggle-bg: var(--toggle-color-light);
-  --toggle-button: var(--light-white-bg-color);
-  --dark-mode-text-color: var(--light-dark-gray-blue-text-color)
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--dark-blue-bg-color);
-    --text-color: var(--dark-white-text-color);
-    --header-subtitle: var(--dark-blue-desaturated-text-color);
-    --card-color: var(--dark-blue-desaturated-card-bg-color);
-    --card-text: var(--light-dark-blue-text-color);
-    --card-followers-text: var(--dark-blue-desaturated-text-color);
-    --card-hover: var(--dark-blue-card-hover);
-    --toggle-bg: var(--toggle-gradient-color);
-    --toggle-button: var(--dark-blue-bg-color);
-    --dark-mode-text-color: var(--dark-blue-desaturated-text-color);
-  }
 }
 
 html {
@@ -71,8 +50,8 @@ body {
   margin: 0;
   padding: 1;
   font-family: var(--font-family);
-  background-color: var(--light-white-bg-color);
-  color: var(--light-dark-blue-text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 624px) {
@@ -106,7 +85,7 @@ a:active {
 
 label {
   font-size: 0.8rem;
-  color: var(--light-dark-gray-blue-text-color);
+  color: var(--header-subtitle);
 }
 
 .visually-hidden {
@@ -127,7 +106,7 @@ label {
 
 label[for="dark"] {
   line-height: 1.5rem;
-  margin-right: .8rem;
+  margin-right: 0.8rem;
 }
 
 .toggle-wrapper {
@@ -150,7 +129,7 @@ label[for="dark"] {
   top: 0;
   border-radius: 0.75rem;
   overflow: hidden;
-  background: var(--toggle-color-light);
+  background: var(--toggle-bg);
   pointer-events: none;
 }
 
@@ -162,7 +141,7 @@ label[for="dark"] {
   width: 1.125rem;
   height: 1.125rem;
   border-radius: 50%;
-  background-color: var(--light-white-bg-color);
+  background-color: var(--background-color);
   transition: all 200ms ease-in-out;
 }
 
@@ -227,7 +206,7 @@ label {
 .header-subtitle {
   font-size: 0.8rem;
   font-weight: var(--font-weight-700);
-  color: var(--light-dark-gray-blue-text-color);
+  color: var(--header-subtitle);
 }
 
 .grid {
@@ -247,18 +226,17 @@ label {
 }
 
 .card {
-  background: var(--light-gray-blue-card-bg-color);
-  color: var(--light-dark-gray-blue-text-color);
+  background: var(--card-color);
+  color: var(--header-subtitle);
   padding: 1.5rem;
   width: 16rem;
   text-align: center;
-  /* border-radius: 0.3rem; */
   margin: 0 auto 2rem auto;
   transition: all 250ms ease-in-out;
 }
 
 .card:hover {
-  background: var(--light-white-card-hover);
+  background: var(--card-hover);
   cursor: pointer;
 }
 
@@ -296,7 +274,7 @@ label {
 }
 
 .card-followers {
-  color: var(--light-dark-blue-text-color);
+  color: var(--text-color);
   font-size: 3.5rem;
 }
 
@@ -338,7 +316,7 @@ label {
 }
 
 .social-stat-counts {
-  color: var(--light-dark-blue-text-color);
+  color: var(--text-color);
   font-size: 1.5rem;
   margin-top: 1rem;
 }
