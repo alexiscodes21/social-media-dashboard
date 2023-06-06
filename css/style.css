@@ -14,6 +14,7 @@
   --dark-blue-bg-color: #1e202a;
   --dark-blue-top-bg-pattern-color: #1f212e;
   --dark-blue-desaturated-card-bg-color: #252a41;
+  --dark-blue-card-hover: #333a55;
   --dark-blue-desaturated-text-color: #8b97c6;
   --dark-white-text-color: #ffffff;
   /* light mode colors */
@@ -49,7 +50,7 @@ body {
 
 @media screen and (max-width: 624px) {
   body {
-    padding: 2rem
+    padding: 2rem;
   }
 }
 
@@ -75,29 +76,33 @@ a:visited,
 a:active {
   text-decoration: none;
 }
-
-label[for="dark"] {
-  grid-column: 1 / 2;
-  justify-self: end;
+label {
+  font-size: 0.8rem;
 }
 
-label[for="light"] {
-  grid-column: 3 / 4;
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .toggle {
   display: grid;
-  grid-template-columns: 1fr 3.75rem 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 3rem;
   border: none;
-  gap: 0.75rem;
   margin: 0;
+}
+
+label[for="dark"] {
+  line-height: 1.5rem;
+  margin-right: .8rem;
 }
 
 .toggle-wrapper {
   position: relative;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
   height: 1.5rem;
 }
 
@@ -105,7 +110,7 @@ label[for="light"] {
   margin: 0 -2px 0 -2px;
   opacity: 0;
   width: 1.25rem;
-  height: 1.5rem;
+  height: 1.25rem;
 }
 
 .toggle-background {
@@ -220,6 +225,12 @@ label {
   text-align: center;
   /* border-radius: 0.3rem; */
   margin: 0 auto 2rem auto;
+  transition: all 250ms ease-in-out;
+}
+
+.card:hover {
+  background: var(--dark-blue-card-hover);
+  cursor: pointer;
 }
 
 .card-platform {
@@ -258,12 +269,6 @@ label {
 .card-followers {
   color: var(--dark-white-text-color);
   font-size: 3.5rem;
-}
-
-.card-count .count-big {
-}
-
-.card-count .count-small {
 }
 
 .card-label {
@@ -317,5 +322,5 @@ label {
 }
 
 .percentage .card-change-down {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
