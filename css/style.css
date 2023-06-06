@@ -47,6 +47,12 @@ body {
   color: var(--dark-white-text-color);
 }
 
+@media screen and (max-width: 624px) {
+  body {
+    padding: 2rem
+  }
+}
+
 h1,
 h2,
 h3 {
