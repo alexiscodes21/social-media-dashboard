@@ -76,7 +76,6 @@ label[for="dark"] {
   justify-self: end;
 }
 
-
 label[for="light"] {
   grid-column: 3 / 4;
 }
@@ -104,7 +103,6 @@ label[for="light"] {
   height: 1.5rem;
 }
 
-
 .toggle-background {
   display: block;
   height: 100%;
@@ -119,8 +117,8 @@ label[for="light"] {
 
 .toggle-button {
   position: absolute;
-  left: .2rem;
-  top: .2rem;
+  left: 0.2rem;
+  top: 0.2rem;
   right: 100%;
   width: 1.125rem;
   height: 1.125rem;
@@ -131,7 +129,7 @@ label[for="light"] {
 
 .toggle #light:checked ~ .toggle-button {
   left: calc(100% - 1.3rem);
-  right: .2rem;
+  right: 0.2rem;
 }
 
 .toggle #system:checked ~ .toggle-button {
@@ -141,7 +139,7 @@ label[for="light"] {
 }
 
 label {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .container {
@@ -193,34 +191,49 @@ label {
   color: var(--dark-blue-desaturated-text-color);
 }
 
-.header-toggle {
-}
-
 .card {
   background: var(--dark-blue-desaturated-card-bg-color);
   color: var(--dark-blue-desaturated-text-color);
-  padding: 1.25rem;
+  padding: 1.5rem;
+  width: 16rem;
+  text-align: center;
+  border-radius: .3rem;
 }
 
 .card-platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.75rem;
 }
 
-.card-icon .facebook {
+.card-icon {
+  margin-right: 0.5rem;
 }
 
-.card-icon .twitter {
+.facebook {
+  border-top: 0.3rem solid var(--facebook-color);
 }
 
-.card-icon .instagram {
+.twitter {
+  border-top: 0.3rem solid var(--twitter-color);
 }
 
-.card-icon .youtube {
+.instagram {
+  border-top: 0.3rem solid var(--instagram-color);
+}
+
+.youtube {
+  border-top: 0.3rem solid var(--youtube-color);
 }
 
 .card-username {
+  font-size: 0.75rem;
 }
 
-.card-count {
+.card-followers {
+  color: var(--dark-white-text-color);
+  font-size: 3.5rem;
 }
 
 .card-count .count-big {
@@ -229,13 +242,26 @@ label {
 .card-count .count-small {
 }
 
-.card-count .count-up {
+.card-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
-.card-label {
+.card-change-up-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.75rem;
+}
+
+.arrow {
+  margin-right: 0.5rem;
 }
 
 .card-change {
+  color: var(--lime-green-color);
+  font-size: 0.75rem;
 }
 
 .card-change .change-up {
